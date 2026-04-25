@@ -1,10 +1,10 @@
-# Machine Learning-Based Water Potability Classification
+# Machine Learning and Deep Learning-Based Aquaculture Water Quality Classification
 
 ## 📌 Project Overview
 
-This project aims to develop a machine learning system that classifies water samples as **safe or unsafe for drinking** based on physicochemical properties.
+This project develops a robust system for classifying aquaculture water quality into three categories: **Excellent, Good, and Poor** using both **classical machine learning** and **advanced deep learning approaches**.
 
-It follows a complete machine learning workflow including exploratory data analysis (EDA), data preprocessing, feature engineering, model training, evaluation, and comparison of multiple classification algorithms.
+The study follows a complete data science pipeline, integrating exploratory data analysis (EDA), preprocessing, feature engineering, model development, and comprehensive evaluation.
 
 ---
 
@@ -18,16 +18,6 @@ It follows a complete machine learning workflow including exploratory data analy
 
 ---
 
-## 🧩 Algorithm Allocation by Member
-
-1. **Shadiah**: Support Vector Machine (SVM), Logistic Regression
-2. **Kigozi Allan**: K-Nearest Neighbors (KNN), Decision Tree
-3. **Ageno Elizabeth**: TabNet, Multilayer Perceptron (MLP)
-4. **Keith Paul Kato**: XGBoost, Gradient Boosting
-5. **Mugole Joel**: 1D Convolutional Neural Network (1D-CNN), FT-Transformer
-
----
-
 ## 🎓 Course Information
 
 * **Course:** Introduction to Machine Learning (CSC 2201)
@@ -37,34 +27,49 @@ It follows a complete machine learning workflow including exploratory data analy
 
 ---
 
+## 🎯 Problem Statement
+
+Water quality assessment in aquaculture systems is critical for fish health and productivity. Traditional methods rely on threshold-based analysis, which may fail to capture complex, nonlinear relationships among water parameters.
+
+This project aims to develop intelligent models capable of accurately classifying water quality using both machine learning and deep learning techniques.
+
+---
+
 ## 🎯 Objectives
 
 * Perform data cleaning and preprocessing
-* Handle missing values, outliers, and class imbalance
+* Handle missing values and inconsistencies
 * Conduct exploratory data analysis (EDA)
-* Implement multiple classification algorithms
-* Evaluate models using appropriate performance metrics
-* Identify key features influencing water potability
+* Implement multiple machine learning algorithms
+* Design and evaluate multiple deep learning models
+* Compare performance across ML and DL approaches
+* Identify the most effective model for classification
 
 ---
 
 ## 🧪 Dataset
 
-The dataset contains water quality parameters such as:
+The project uses the **Aquaculture Water Quality Dataset**, consisting of:
 
-* pH
-* Hardness
-* Solids
-* Chloramines
-* Sulphate
-* Conductivity
-* Organic Carbon
-* Trihalomethanes
-* Turbidity
+* Approximately **4300 samples**
+* **14 input features**, including:
 
-Target:
+  * Temperature
+  * Turbidity
+  * Dissolved Oxygen
+  * pH
+  * Alkalinity
+  * Hardness
+  * Calcium
+  * Ammonia
+  * Nitrite
+  * Phosphorus
+  * Plankton
+* Output label:
 
-* **Potability (1 = Safe, 0 = Unsafe)**
+  * **0 → Excellent**
+  * **1 → Good**
+  * **2 → Poor**
 
 ---
 
@@ -82,13 +87,24 @@ Target:
 
 ## ⚙️ Models Implemented
 
+### 🔹 Machine Learning Models
+
 * K-Nearest Neighbors (KNN)
 * Naive Bayes
 * Logistic Regression
 * Support Vector Machine (SVM)
 * Decision Tree
 * Random Forest
-* Boosting Algorithms (optional)
+* Boosting Algorithms (AdaBoost / XGBoost)
+
+---
+
+### 🔹 Deep Learning Models (Tabular Data Focus)
+
+* Feedforward Neural Network (Multi-Layer Perceptron – MLP)
+* Deep Neural Network with multiple hidden layers
+* Regularized Neural Networks (Dropout, Batch Normalization)
+* Hyperparameter-tuned neural architectures
 
 ---
 
@@ -97,30 +113,38 @@ Target:
 * Accuracy
 * Precision
 * Recall
-* F1-score
+* F1-score (Macro & Weighted)
 * Confusion Matrix
-* ROC-AUC
 
 ---
 
 ## ⚠️ Key Challenges Addressed
 
-* Missing values handling
-* Class imbalance handling
-* Outlier detection and treatment
+* Multi-class classification complexity
+* Feature variability across environmental parameters
+* Model generalization and overfitting
+* Fair comparison between ML and deep learning models
 
 ---
 
 ## 📁 Project Structure
 
 * `data/` → dataset files
-* `notebooks/` → step-by-step ML workflow
-* `src/` → reusable code
-* `results/` → outputs and evaluation metrics
-* `reports/` → visualizations and final report
+* `notebooks/` → EDA and model development
+* `src/` → reusable code modules
+* `results/` → evaluation outputs
+* `reports/` → figures and final report
 
 ---
 
-## 🚀 Conclusion
+## 🚀 Expected Contribution
 
-This project demonstrates the application of machine learning techniques in solving real-world problems related to water quality assessment.
+This project provides a comparative analysis of machine learning and deep learning techniques for aquaculture water quality classification, highlighting the strengths and limitations of each approach in handling structured environmental data.
+
+---
+
+## 🧠 Conclusion
+
+The integration of machine learning and deep learning techniques enables more accurate and scalable water quality classification, contributing to improved decision-making in aquaculture systems.
+
+---
