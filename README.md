@@ -1,10 +1,10 @@
-# Machine Learning and Deep Learning-Based Aquaculture Water Quality Classification
+# Machine Learning and Deep Learning-Based Prediction of Financial Inclusion in East Africa
 
 ## 📌 Project Overview
 
-This project develops a robust system for classifying aquaculture water quality into three categories: **Excellent, Good, and Poor** using both **classical machine learning** and **advanced deep learning approaches**.
+This project develops a predictive system to determine whether an individual has or uses a bank account using **machine learning and deep learning techniques**.
 
-The study follows a complete data science pipeline, integrating exploratory data analysis (EDA), preprocessing, feature engineering, model development, and comprehensive evaluation.
+The study is based on the **Financial Inclusion in Africa dataset** and follows a complete machine learning workflow, including exploratory data analysis (EDA), preprocessing, feature engineering, model development, and evaluation.
 
 ---
 
@@ -29,47 +29,55 @@ The study follows a complete data science pipeline, integrating exploratory data
 
 ## 🎯 Problem Statement
 
-Water quality assessment in aquaculture systems is critical for fish health and productivity. Traditional methods rely on threshold-based analysis, which may fail to capture complex, nonlinear relationships among water parameters.
+Despite the growth of mobile money and financial technologies, many individuals in East Africa remain excluded from formal banking systems. Traditional analysis methods often fail to capture complex relationships between demographic and socioeconomic factors.
 
-This project aims to develop intelligent models capable of accurately classifying water quality using both machine learning and deep learning techniques.
+This project aims to develop a data-driven approach for predicting financial inclusion using machine learning and deep learning models.
 
 ---
 
 ## 🎯 Objectives
 
-* Perform data cleaning and preprocessing
-* Handle missing values and inconsistencies
-* Conduct exploratory data analysis (EDA)
-* Implement multiple machine learning algorithms
-* Design and evaluate multiple deep learning models
-* Compare performance across ML and DL approaches
-* Identify the most effective model for classification
+* Perform exploratory data analysis (EDA) on financial inclusion data
+* Clean and preprocess demographic and socioeconomic data
+* Engineer relevant predictive features
+* Implement multiple classification algorithms
+* Develop deep learning models for prediction
+* Evaluate and compare model performance
+* Identify key factors influencing financial inclusion
 
 ---
 
-## 🧪 Dataset
+## 🧪 Dataset Description
 
-The project uses the **Aquaculture Water Quality Dataset**, consisting of:
+The dataset is sourced from the **Zindi Financial Inclusion in Africa Challenge**, containing:
 
-* Approximately **4300 samples**
-* **14 input features**, including:
+* Approximately **33,600 individuals**
+* Data from **Kenya, Rwanda, Tanzania, and Uganda**
+* Demographic and socioeconomic features such as:
 
-  * Temperature
-  * Turbidity
-  * Dissolved Oxygen
-  * pH
-  * Alkalinity
-  * Hardness
-  * Calcium
-  * Ammonia
-  * Nitrite
-  * Phosphorus
-  * Plankton
-* Output label:
+  * Age
+  * Gender
+  * Education level
+  * Employment type
+  * Household size
+  * Location type (urban/rural)
 
-  * **0 → Excellent**
-  * **1 → Good**
-  * **2 → Poor**
+### 🎯 Target Variable
+
+* `bank_account`
+
+  * **1 → Has/uses a bank account**
+  * **0 → Does not have/use a bank account**
+
+---
+
+## ⚠️ Data Usage Notice
+
+This dataset is provided through Zindi and is subject to usage restrictions.
+
+❌ The dataset is **NOT included in this repository**
+✔ Users must download it directly from the official source:
+👉 https://zindi.africa/competitions/financial-inclusion-in-africa/data
 
 ---
 
@@ -89,62 +97,66 @@ The project uses the **Aquaculture Water Quality Dataset**, consisting of:
 
 ### 🔹 Machine Learning Models
 
+* Logistic Regression
 * K-Nearest Neighbors (KNN)
 * Naive Bayes
-* Logistic Regression
-* Support Vector Machine (SVM)
 * Decision Tree
 * Random Forest
-* Boosting Algorithms (AdaBoost / XGBoost)
+* Support Vector Machine (SVM)
+* Gradient Boosting / XGBoost
 
 ---
 
-### 🔹 Deep Learning Models (Tabular Data Focus)
+### 🔹 Deep Learning Models
 
 * Feedforward Neural Network (Multi-Layer Perceptron – MLP)
-* Deep Neural Network with multiple hidden layers
 * Regularized Neural Networks (Dropout, Batch Normalization)
-* Hyperparameter-tuned neural architectures
 
 ---
 
 ## 📊 Evaluation Metrics
 
+Although the official competition metric is Mean Absolute Error (MAE), this study also uses:
+
 * Accuracy
 * Precision
 * Recall
-* F1-score (Macro & Weighted)
+* F1-score
 * Confusion Matrix
+* ROC-AUC
+
+These metrics provide a more comprehensive evaluation for classification performance.
 
 ---
 
 ## ⚠️ Key Challenges Addressed
 
-* Multi-class classification complexity
-* Feature variability across environmental parameters
+* Class imbalance in financial inclusion
+* Handling categorical variables
+* Feature selection and transformation
 * Model generalization and overfitting
-* Fair comparison between ML and deep learning models
 
 ---
 
 ## 📁 Project Structure
 
-* `data/` → dataset files
+* `data/` → raw and processed data (not included)
 * `notebooks/` → EDA and model development
 * `src/` → reusable code modules
 * `results/` → evaluation outputs
-* `reports/` → figures and final report
+* `reports/` → figures and concept paper
+* `submissions/` → prediction outputs
 
 ---
 
-## 🚀 Expected Contribution
+## 🌍 Significance of the Study
 
-This project provides a comparative analysis of machine learning and deep learning techniques for aquaculture water quality classification, highlighting the strengths and limitations of each approach in handling structured environmental data.
+This project addresses a real-world development challenge in East Africa by applying machine learning to improve understanding of financial inclusion patterns. The findings can support policymakers, financial institutions, and development agencies in designing targeted financial services.
 
 ---
 
-## 🧠 Conclusion
+## 🚀 Conclusion
 
-The integration of machine learning and deep learning techniques enables more accurate and scalable water quality classification, contributing to improved decision-making in aquaculture systems.
+The project demonstrates how machine learning and deep learning techniques can be applied to predict financial inclusion and uncover key socioeconomic factors influencing access to banking services.
 
 ---
